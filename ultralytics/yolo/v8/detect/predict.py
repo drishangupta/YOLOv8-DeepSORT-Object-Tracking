@@ -29,7 +29,7 @@ object_counter = {}
 
 object_counter1 = {}
 
-line = [(100, 500), (1050, 500)]
+line = [(960, 0),(960, 1080)]
 def init_tracker():
     global deepsort
     cfg_deep = get_config()
@@ -154,7 +154,7 @@ def get_direction(point1, point2):
 
     return direction_str
 def draw_boxes(img, bbox, names,object_id, identities=None, offset=(0, 0)):
-    cv2.line(img, line[0], line[1], (46,162,112), 3)
+    cv2.line(img, line[1], line[0], (46,162,112), 3)
 
     height, width, _ = img.shape
     # remove tracked point from buffer if object is lost
